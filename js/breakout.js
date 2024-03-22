@@ -94,7 +94,7 @@ function keyDown(e){
 }
 
 function draw() {
-    
+
 }
 
 //move paddle on canvas
@@ -104,6 +104,7 @@ function movePaddle () {
 
 //keyboard event handlers
 document.addEventListener('keydown', keyDown)
+document.addEventListener('keyup', keyUp)
 
 
 
