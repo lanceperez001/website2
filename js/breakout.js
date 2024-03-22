@@ -93,6 +93,10 @@ function keyDown(e){
     console.log
 }
 
+function draw() {
+    
+}
+
 //move paddle on canvas
 function movePaddle () {
     paddle.x = paddle.x + paddle.dx
