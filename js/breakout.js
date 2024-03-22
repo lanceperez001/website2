@@ -88,9 +88,15 @@ function draw() {
     drawBricks()
 }
 
-func
+function update () {
 
-draw()
+    draw()
+    requestAnimationFrame(update)
+}
+
+update()
+
+
 
 rulesBtn.addEventListener('click', () => {
     rules.classList.add('show')
