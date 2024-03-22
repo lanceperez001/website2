@@ -88,6 +88,21 @@ function draw() {
     drawBricks()
 }
 
+//keydown Event
+function keyDown(e){
+    console.log
+}
+
+//move paddle on canvas
+function movePaddle () {
+    paddle.x = paddle.x + paddle.dx
+}
+
+//keyboard event handlers
+document.addEventListener('keydown', keyDown)
+
+
+
 function update () {
 
     draw()
