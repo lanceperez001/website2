@@ -90,7 +90,17 @@ function draw() {
 
 //keydown Event
 function keyDown(e){
-    console.log
+    //console.log(e.key)
+    if (e.key == 'ArrowRight' || e.key == 'left') {
+        paddle.dx = -paddle.speed
+    }
+}
+
+function keyDown(e){
+    //console.log(e.key)
+    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key ==) {
+        paddle.dx = -paddle.speed
+    }
 }
 
 function draw() {
