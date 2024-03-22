@@ -88,38 +88,53 @@ function draw() {
     drawBricks()
 }
 
-//keydown Event
-function keyDown(e){
-    //console.log(e.key)
-    if (e.key == 'ArrowRight' || e.key == 'left') {
-        paddle.dx = -paddle.speed
-    }
-}
-
-function keyDown(e){
-    //console.log(e.key)
-    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key ==) {
-        paddle.dx = -paddle.speed
-    }
-}
-
 function draw() {
-
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    drawBall()
+    drawPaddle()
+    drawScore()
+    drawBricks()
 }
 
-//move paddle on canvas
-function movePaddle () {
+// Move paddle on canvas
+function movePaddle() {
     paddle.x = paddle.x + paddle.dx
+
+    // Wall Detection
+    if (paddle.x < 0) {
+        paddle.x = 0
+    }
+    if (paddle.x + paddle.w > canvas.width) {
+        paddle.x = canvas.width - paddle.w
+    }
 }
 
-//keyboard event handlers
+//Keydown Event
+function keyDown(e) {
+   // console.log(e.key)
+   if (e.key == 'ArrowRight' || e.key == 'Right') {
+    paddle.dx = paddle.speed
+   }
+   if (e.key == 'ArrowLeft' || e.key == 'Left') {
+    paddle.dx = -paddle.speed
+   }
+}
+
+// Keyup event
+function keyUp(e) {
+    if (e.key == 'ArrowRight' || e.key == 'Right' || e.key == 'ArrowLeft' || e.key == 'Left') {
+        paddle.dx = 0
+    }
+
+}
+
+// Keyboard event handlers
 document.addEventListener('keydown', keyDown)
 document.addEventListener('keyup', keyUp)
 
-
-
-function update () {
-
+// Update the canvas drawing and animation
+function update() {
+    movePaddle()
     draw()
     requestAnimationFrame(update)
 }
