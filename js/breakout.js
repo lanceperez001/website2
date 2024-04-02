@@ -156,7 +156,23 @@ function moveBall() {
         ball.x - ball.size > paddle.x &&
         ball.x + ball.size < paddle.x + paddle.w &&
         ball.y + ball.size < paddle.y
-    )
+    ) {
+        ball.dy = -1 * ball.dy
+    }
+
+    brick.forEach(column => {
+        column.forEach(bricl => {
+            if (bricl.visible) {
+                if (
+                    ball.x - ball.size > brick.x && //left
+                    ball.x + ball.size < brick.x + brick.w &&
+                    ball.y - ball.size < brick.y + brick.h
+                )
+                ball.dy = -1 * ball.dy
+                brick.visible = false
+            }
+        })
+    })
 
 }
 
