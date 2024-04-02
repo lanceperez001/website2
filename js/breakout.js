@@ -144,8 +144,12 @@ function moveBall() {
         ball.dx = -1 * ball.dx
     }
 
+    //wall collision (bottom)
     if (ball.y + ball.size > canvas.height) {
         ball.dy = -1 * ball.dy
+        showAllBricks()
+        score = 0
+
     }
 
     if (ball.x + ball.size < 0) {
@@ -157,7 +161,7 @@ function moveBall() {
         ball.x + ball.size < paddle.x + paddle.w &&
         ball.y + ball.size < paddle.y
     ) {
-        ball.dy = -1 * ball.dy
+        ball.dy = -1 * ball.speed
     }
 
     brick.forEach(column => {
@@ -167,13 +171,31 @@ function moveBall() {
                     ball.x - ball.size > brick.x && //left
                     ball.x + ball.size < brick.x + brick.w &&
                     ball.y - ball.size < brick.y + brick.h
-                )
-                ball.dy = -1 * ball.dy
-                brick.visible = false
+                ) {
+                    ball.dy = -1 * ball.dy
+                    brick.visible = false
+                    increaseScore()
+                }
             }
         })
     })
+}
 
+function increaseScore() {
+    score ++ //score = score +1
+
+    If (score == brickRowCount * brickColumnCount) {
+        score = 0
+        showAllBricks()
+    }
+}
+
+function showAllBricks(){
+    bricks.forEach(column => {
+        column.forEach(bricl => {
+            brick.visible = true
+        })
+    })
 }
 
 // Update the canvas drawing and animation
