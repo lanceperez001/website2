@@ -82,7 +82,7 @@ function drawBricks() {
         column.forEach(brick => {
             ctx.beginPath()
             ctx.rect(brick.x, brick.y, brick.w, brick.h)
-            ctx.fillStyle = brick.visible ? 'pink' : 'transparent';
+            ctx.fillStyle = brick.visible ? 'rgb(182, 208, 226)' : 'transparent';
             ctx.fill()
             ctx.closePath()
         })
