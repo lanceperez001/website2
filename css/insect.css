@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #C3B8DB
+    background-color: #C3B8DB;
     color: #ffffff;
     font-family: "Press Start 2P", system-ui;
     height: 100vh;
@@ -13,4 +13,8 @@ body {
     text-align: center;
 }
 
-.choose 
+.choose-insect-btn img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
