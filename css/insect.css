@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,4 +6,11 @@
 
 body {
     background-color: #C3B8DB
+    color: #ffffff;
+    font-family: "Press Start 2P", system-ui;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
 }
+
+.choose 
