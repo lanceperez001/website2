@@ -37,7 +37,7 @@ body {
     font-family: inherit;
 }
 
-.btn-hover {
+.btn:hover {
     opacity: 0.9;
 }
 
@@ -46,9 +46,11 @@ body {
 }
 
 a{
+    color: white;
 }
 
 h1 {
+    line-height: 1.4;
 }
 
 .insects-list {
@@ -61,4 +63,8 @@ h1 {
 
 insects-list li {
     margin: 10px;
+}
+
+.choose-insect-btn {
+    background-color: transparent;
 }
