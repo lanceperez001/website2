@@ -3,6 +3,7 @@ rules = document.getElementById('rules')
 closeBtn = document.getElementById('close-btn')
 canvas = document.getElementById('canvas')
 ctx = canvas.getContext('2d')
+startBtn = document.getElementById('start-btn')
 
 score = 0
 
