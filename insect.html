@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTL-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale+1.0">
     <title>Catch The Insect</title>
     <link rel="stylesheet" href="css/insect.css">
+
 </head>
 <body>
     <div class="screen">
-        <h1>Catch The Insect</h1>
+        <h1>Catch The Insect<h1>
         <button class="btn" id="start-btn">Play Game</button>
     </div>
+
     <div class="screen">
-        <h1>What is your "favorite" insect?</h1>
-        <ul class="insects-list">
-            <li>
-                <button class="choose-insect-btn">
-                    <p>Fly</p>
-                    <img src="images/fly.png" alt="fly">
-                </button>
-                <button class="choose-insect-btn">
-                    <p>Ant</p>
-                    <img src="images/ant.png" alt="ant">
-                </button>
-                <button class="choose-insect-btn">
-                    <p>Beetle</p>
-                    <img src="images/beetle.png" alt="beetle">
-                </button>
-                <button class="choose-insect-btn">
-                    <p>Roach</p>
-                    <img src="images/cockroach.png" alt="cockroach">
-                </button>
-            </li>
-        </ul>
+       <h1>What is your "favorite" insect?</h1>
+       <ul class="insects-list">
+        <li>
+            <button class="choose-insect-btn">
+                <p>Ant</p>
+                <img src="images/ant.png" alt="ant">
+            </button>
+        </li>
+        <li>
+            <button class="choose-insect-btn">
+                <p>Beetle</p>
+                <img src="images/beetle.png" alt="beetle">
+            </button>
+        </li>
+        <li>
+            <button class="choose-insect-btn">
+                <p>Cockoach</p>
+                <img src="images/cockroach.png" alt="cockroach">
+            </button>
+        </li>
+        <li>
+            <button class="choose-insect-btn">
+                <p>Fly</p>
+                <img src="images/fly.png" alt="fly">
+            </button>
+        </li>
+       </ul>
     </div>
 
     <div class="screen game-container" id="game-container">
         <h3 class="time" id="time">Time: 00:00</h3>
-        <h3 class="score" id="score">Score: 0</h3>
-        <h5 class="message visible" id="message">Are you annoyed yet? <br> You are playing an impossible game!</h5>
+        <h3 id="score" class="score">Score: 0</h3>
+        <!-- viSible message -->
+        <h5 id="message" class="message">
+            Are you annoyed yet? <br>
+            You are playing an impossible game!
+        </h5>
+        <h5 id="winning-message" class="winning-message">You won!!!</h5>
+        <h5 id="losing-message" class="losing-message">You Lost :(</h5>
 
-        <div class="insect">
-            <img src="images/fly.png" alt ="">
-        </div>
     </div>
 </body>
-<srcipt src="js/insect.js"></srcipt>
+<script src="js/insect.js"></script>
 </html>
