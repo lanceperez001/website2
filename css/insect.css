@@ -15,6 +15,11 @@ body {
     text-align: center;
 }
 
+.HomePage{
+    position: absolute;
+    top: 20px;
+}
+
 .choose-insect-btn img {
     width: 100px;
     height: 100px;
@@ -181,3 +186,4 @@ h1 {
     width: 100px;
     height: 100px;
 }
+
