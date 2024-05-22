@@ -1,11 +1,10 @@
 
 *{
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
-
-body {
+body{
     background-color: #34495e;
-    color: #ffffff;
+    color: #white;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
@@ -15,30 +14,34 @@ body {
     overflow: hidden;
 }
 
-h1{
-    margin: 20px 0 0;
+.HomePage{
+    position: absolute;
+    bottom: 220px;
 }
 
-.game-container {
+h1{
+    margin: 30px 0 0;
+}
+
+.game-container{
     padding: 20px 30px;
     position: relative;
     margin: auto;
-    height: 350px;
-    width: 450px;
+    height:350px;
+    width:450px;
 }
-
-.figure-container {
+.figure-container{
     fill: transparent;
-    stroke: #ffffff;
+    stroke: white;
     stroke-width: 4px;
-    stroke-linkecap: round;
+    stroke-linecap: round;
 }
 
-.figure-part {
+.figure-part{
     display: none;
 }
 
-.wrong-letters-container {
+.wrong-letters-container{
     position: absolute;
     top: 20px;
     right: 20px;
@@ -47,81 +50,87 @@ h1{
     text-align: right;
 }
 
-.wrong-letters-container p {
+.wrong-letters-container p{
     margin: 0 0 5px;
 }
 
-.wrong-letters-container span {
+.wrong-letters-container span{
     font-size: 24px;
 }
 
-.word {
-    display: flex;
+.word{
+    display:flex;
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.letter {
+.letter{
     font-size: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
-    width: 20px;
+    height:50px;
+    width:20px;
     margin: 0 3px;
     border-bottom: 3px solid #2980b9;
-
 }
 
-.popup-container {
+.popup-container
+{
     background-color: rgba(0,0,0,0.3);
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
     display: none;
     align-items: center;
     justify-content: center;
 }
 
-.popup {
+.popup
+{
     background: #2980b9;
     border-radius: 5px;
-    box-shadow: 0 15px 10px 3px rgba(0,0,0, 0.1);
+    box-shadow: 0 15px 10px 3px rgba(0,0,0,0.1);
+    padding: 20px;
     text-align: center;
 }
 
-.popup button {
+.popup button
+{
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: white;
     color: #2980b9;
     margin-top: 20px;
     padding: 12px 20px;
     font-size: 16px;
 }
 
-.popup button:active {
-    transform: scale(0.98);
+.popup button:active
+{
+    transform: scale(.98);
 }
 
-.notification-container {
+.notification-container
+{
     background-color: rgba(0,0,0,0.3);
+    color: white;
     padding: 15px 20px;
     border-radius: 10px 10px 0 0;
     position: absolute;
     bottom: -50px;
     transition: transform 0.3s ease-in-out;
-
 }
 
-.notifcation-container p {
+.notification-container
+{
     margin: 0;
 }
 
-.notification-container.show {
-    transfrom: translateY(-50px);
+.notification-container.show
+{
+    transform: translateY(-50px);
 }
